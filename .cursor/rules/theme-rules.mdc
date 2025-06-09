@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+This is a wordpress theme bootstrapped by roots/sage repo. It uses ACF Pro blocks from MWDelaney/sage-acf-wp-blocks github library, which means every blade php files inside resources/views/blocks folder automatically becomes a gutenberg block using ACF Blocks.
