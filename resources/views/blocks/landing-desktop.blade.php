@@ -19,14 +19,14 @@
     <nav class="flex justify-end items-center gap-6">
       {{-- Features Dropdown --}}
       <div class="relative group">
-        <button class="text-sm text-[#1A003D] font-medium focus:outline-none flex items-center gap-1 transition-colors duration-200 group-hover:text-[#43197A]">
+        <button class="text-sm text-[#1A003D] cursor-pointer font-medium focus:outline-none flex items-center gap-1 transition-colors duration-200 group-hover:text-[#7029CC]">
           {{ get_field('field_nav_features') }}
-          <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180 group-hover:text-[#43197A]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180 group-hover:text-[#7029CC]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
         @if (have_rows('field_nav_features_dropdown'))
-          <div class="fixed top-20 left-1/2 transform -translate-x-1/2 w-[80vw] max-w-6xl opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-20">
+          <div class="fixed top-12 left-1/2 transform -translate-x-1/2 w-[80vw] max-w-6xl opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-20">
             <div class="mt-14 bg-white rounded-lg">
               <div class="flex gap-6 mx-auto p-6">
                 @while (have_rows('field_nav_features_dropdown'))
@@ -47,14 +47,14 @@
 
       {{-- Resources Dropdown --}}
       <div class="relative group">
-        <button class="text-sm text-[#1A003D] font-medium focus:outline-none flex items-center gap-1 transition-colors duration-200 group-hover:text-[#43197A]">
+        <button class="text-sm text-[#1A003D] cursor-pointer font-medium focus:outline-none flex items-center gap-1 transition-colors duration-200 group-hover:text-[#7029CC]">
           {{ get_field('field_nav_resources') }}
-          <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180 group-hover:text-[#43197A]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180 group-hover:text-[#7029CC]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
         @if (have_rows('field_nav_resources_dropdown'))
-          <div class="fixed top-20 left-1/2 transform -translate-x-1/2 w-[80vw] max-w-6xl opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-20">
+          <div class="fixed top-12 left-1/2 transform -translate-x-1/2 w-[80vw] max-w-6xl opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-20">
             <div class="mt-14 bg-white rounded-lg">
               <div class="flex gap-6 mx-auto p-6">
                 @while (have_rows('field_nav_resources_dropdown'))
@@ -75,14 +75,14 @@
 
       {{-- About Us Dropdown --}}
       <div class="relative group">
-        <button class="text-sm text-[#1A003D] font-medium focus:outline-none flex items-center gap-1 transition-colors duration-200 group-hover:text-[#43197A]">
+        <button class="text-sm text-[#1A003D] cursor-pointer font-medium focus:outline-none flex items-center gap-1 transition-colors duration-200 group-hover:text-[#7029CC]">
           {{ get_field('field_nav_about_us') }}
-          <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180 group-hover:text-[#43197A]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180 group-hover:text-[#7029CC]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
         @if (have_rows('field_nav_about_us_dropdown'))
-          <div class="fixed top-20 left-1/2 transform -translate-x-1/2 w-[80vw] max-w-6xl opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-20">
+          <div class="fixed top-12 left-1/2 transform -translate-x-1/2 w-[80vw] max-w-6xl opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-20">
             <div class="mt-14 bg-white rounded-lg">
               <div class="flex gap-6 mx-auto p-6">
                 @while (have_rows('field_nav_about_us_dropdown'))
