@@ -42,6 +42,42 @@
   background: #1A003D;
   box-shadow: none;
 }
+
+.lottie {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lottie.active {
+    opacity: 1;
+}
+
+.lottie.inactive {
+    opacity: 0.5;
+    position: relative;
+}
+
+.lottie.inactive::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step-number.active {
+    background: #160829 !important;
+}
+
+.step-line {
+    z-index: -1;
+}
 </style>
 
 <header class="sticky top-0 z-30 w-full bg-white py-6 px-[120px] gap-[320px] mx-auto flex justify-center items-center">
@@ -293,6 +329,57 @@
         @endif
         <div class="text-xs text-[#554766] text-center mt-2">
             {{ get_field('field_why_save_in_jar_footnote') }}
+        </div>
+    </section>
+
+    {{-- How Jar Works Section --}}
+    <section id="how-jar-works-section" class="py-20 w-full flex flex-col justify-center items-center gap-12 mx-auto">
+        <h1 class="text-[56px] font-bold text-center text-[#160829]">{{ get_field('field_how_jar_works_title') }}</h1>
+
+        <!-- Lottie Container -->
+        <div id="lottie-container" class="w-full max-w-5xl mx-auto flex justify-center gap-6">
+            @if(have_rows('field_how_jar_works_steps')) 
+                @while(have_rows('field_how_jar_works_steps')) 
+                    @php(the_row())
+                    <div class="lottie w-[300px] h-[300px]" id="lottie-{{ get_sub_field('field_how_jar_works_step_number') }}" 
+                        data-lottie-url="{{ get_sub_field('field_how_jar_works_lottie_url') }}"></div>
+                @endwhile
+            @endif
+        </div>
+
+        <!-- Stepper Section -->
+        <div class="steps-container w-full max-w-5xl flex justify-center gap-6">
+            @if(have_rows('field_how_jar_works_steps')) 
+                @while(have_rows('field_how_jar_works_steps')) 
+                    @php(the_row())
+                    <div class="step flex flex-col justify-center items-center gap-2 w-[300px]" id="step-{{ get_sub_field('field_how_jar_works_step_number') }}">
+                        <div class="step-number w-8 h-8 bg-[#887A99] rounded-full flex items-center justify-center text-white font-bold">
+                            {{ get_sub_field('field_how_jar_works_step_number') }}
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-[#1A003D]">
+                            {{ get_sub_field('field_how_jar_works_step_title') }}
+                        </h3>
+                        <p class="text-sm text-[#1A003D] text-center">
+                            {{ get_sub_field('field_how_jar_works_step_desc') }}
+                        </p>
+                    </div>
+                @endwhile
+            @endif
+            <div class="step-line absolute top-[-20px] left-0 w-full h-[2px] bg-[#E9E4F0]"></div>
+        </div>
+
+        <!-- Controls Section -->
+        <div class="controls w-full flex justify-center gap-3">
+            <button class="prev-step bg-[#43197A] text-white rounded-full w-10 h-10 flex justify-center items-center cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button class="next-step bg-[#43197A] text-white rounded-full w-10 h-10 flex justify-center items-center cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
         </div>
     </section>
 </main>
