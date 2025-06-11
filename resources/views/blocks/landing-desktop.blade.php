@@ -10,6 +10,39 @@
   SupportsMode: true
   SupportsMultiple: false
 --}}
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (document.getElementById('mentions-splide')) {
+      new Splide('#mentions-splide', {
+        type: 'loop',
+        perPage: 1,
+        pagination: true,
+        arrows: false,
+        gap: '2rem',
+        classes: {
+          pagination: 'splide__pagination flex justify-center gap-2 mt-4',
+          page: 'splide__pagination__page w-4 h-4 rounded-full mx-1',
+        }
+      }).mount();
+    }
+  });
+</script>
+
+<style>
+.splide__pagination__page {
+  background: #BEB4CC;
+  border-radius: 9999px;
+  transition: all 0.2s;
+  margin: 0;
+  opacity: 1;
+}
+.splide__pagination__page.is-active {
+  background: #1A003D;
+  box-shadow: none;
+}
+</style>
 
 <header class="sticky top-0 z-30 w-full bg-white py-6 px-[120px] gap-[320px] mx-auto flex justify-center items-center">
     <div class="flex items-center gap-3">
@@ -199,5 +232,67 @@
             @endwhile
 
         @endif
+    </section>
+
+    {{-- Mentions Section --}}
+    <section class="w-full bg-[#FEF9EA] py-20 px-[120px] flex flex-col gap-12 items-center">
+        <h2 class="text-[56px] font-bold text-center text-[#1A003D]">
+            {{ get_field('field_mentions_section_title') }}
+        </h2>
+        @if(have_rows('field_mentions_section'))
+            <div id="mentions-splide" class="splide w-full max-w-4xl mx-auto">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        @while(have_rows('field_mentions_section')) @php(the_row())
+                            <li class="splide__slide flex flex-col items-center w-full">
+                                <div class="w-full flex justify-center">
+                                    <iframe
+                                        src="{{ get_sub_field('field_mentions_video_url') }}"
+                                        class="w-full max-w-4xl aspect-video"
+                                        allowfullscreen
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        title="Mention Video"
+                                    ></iframe>
+                                </div>
+                                <span class="text-xs text-[#554766] text-center pt-1">
+                                    <strong>Credits:</strong> {{ get_sub_field('field_mentions_credit') }}
+                                </span>
+                                <div class="text-xl font-bold text-center pt-12"
+                                  style="background: linear-gradient(90deg, #7029CC 30.82%, #CC29BC 69.57%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                                    {!! get_sub_field('field_mentions_title') !!}
+                                </div>
+                                <div class="text-base text-[#1A003D] text-center pt-4 mb-8">
+                                    {{ get_sub_field('field_mentions_subtitle') }}
+                                </div>
+                            </li>
+                        @endwhile
+                    </ul>
+                </div>
+            </div>
+        @endif
+    </section>
+
+    {{-- Why Save in Jar Section --}}
+    <section class="w-full bg-[#F4F4F5] py-20 flex flex-col items-center">
+        <h2 class="text-[56px] font-bold text-center text-[#1A003D] mb-12">
+            {{ get_field('field_why_save_in_jar_title') }}
+        </h2>
+        @if(have_rows('field_why_save_in_jar_features'))
+            <div class="grid grid-cols-3 justify-center gap-6 w-full max-w-6xl">
+                @while(have_rows('field_why_save_in_jar_features')) @php(the_row())
+                    <div class="bg-white rounded-[20px] flex flex-col items-center p-5 border border-[#E9E4F0]">
+                        <img src="{{ get_sub_field('field_why_save_in_jar_icon') }}" alt="{{ get_sub_field('field_why_save_in_jar_card_title') }}" class="h-[160px] w-auto mb-4" />
+                        <div class="text-xl font-bold text-[#1A003D] mb-2 text-center">{{ get_sub_field('field_why_save_in_jar_card_title') }}</div>
+                        <div class="text-base text-[#554766] text-center max-w-[65%]">
+                            {{ get_sub_field('field_why_save_in_jar_card_desc') }}
+                        </div>
+                    </div>
+                @endwhile
+            </div>
+        @endif
+        <div class="text-xs text-[#554766] text-center mt-2">
+            {{ get_field('field_why_save_in_jar_footnote') }}
+        </div>
     </section>
 </main>
