@@ -1,0 +1,1417 @@
+{
+    "key": "group_landing_page_block",
+    "title": "Landing Page Block (Desktop)",
+    "fields": [
+        {
+            "key": "field_logo_image",
+            "label": "Logo Image",
+            "name": "logo_image",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/shopnek.com\/assets_new\/images\/shared\/logos\/logo-jar.avif",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_logo_alt",
+            "label": "Logo Alt Text",
+            "name": "logo_alt",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Jar Logo",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_logo_text",
+            "label": "Logo Text",
+            "name": "logo_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Jar",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_nav_features",
+            "label": "Features Menu Text",
+            "name": "nav_features",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Features",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_nav_features_dropdown",
+            "label": "Features Dropdown Items",
+            "name": "nav_features_dropdown",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Item",
+            "default_value": [
+                {
+                    "title": "Daily Saving",
+                    "desc": "Save money in digital gold every day, automatically.",
+                    "link": "#"
+                },
+                {
+                    "title": "Weekly Saving",
+                    "desc": "Save money in digital gold every week, automatically.",
+                    "link": "#"
+                },
+                {
+                    "title": "Monthly Saving",
+                    "desc": "Save money in digital gold every month, automatically.",
+                    "link": "#"
+                },
+                {
+                    "title": "Instant Saving",
+                    "desc": "Save any amount anytime as per your needs",
+                    "link": "#"
+                },
+                {
+                    "title": "Buy Jewellery",
+                    "desc": "Shop affordable silver and gold jewellery",
+                    "link": "#"
+                }
+            ],
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_nav_features_dropdown_title",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_nav_features_dropdown"
+                },
+                {
+                    "key": "field_nav_features_dropdown_desc",
+                    "label": "Description",
+                    "name": "desc",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_nav_features_dropdown"
+                },
+                {
+                    "key": "field_nav_features_dropdown_link",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_nav_features_dropdown"
+                }
+            ]
+        },
+        {
+            "key": "field_nav_gold_rates",
+            "label": "Gold Rates Menu Text",
+            "name": "nav_gold_rates",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Gold Rates",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_nav_gold_rates_link",
+            "label": "Gold Rates Link",
+            "name": "nav_gold_rates_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#",
+            "placeholder": ""
+        },
+        {
+            "key": "field_nav_resources",
+            "label": "Resources Menu Text",
+            "name": "nav_resources",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Resources",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_nav_resources_dropdown",
+            "label": "Resources Dropdown Items",
+            "name": "nav_resources_dropdown",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Item",
+            "default_value": [
+                {
+                    "title": "Growth Calculator",
+                    "desc": "Estimate how your money grows over time.",
+                    "link": "#"
+                },
+                {
+                    "title": "Gold SIP Calculator",
+                    "desc": "Plan your digital gold savings.",
+                    "link": "#"
+                },
+                {
+                    "title": "7th CPC Salary Calculator",
+                    "desc": "Check your revised salary as per 7th Pay Commission.",
+                    "link": "#"
+                },
+                {
+                    "title": "Retirement Calculator",
+                    "desc": "Find how much you need to retire comfortably.",
+                    "link": "#"
+                }
+            ],
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_nav_resources_dropdown_title",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_nav_resources_dropdown"
+                },
+                {
+                    "key": "field_nav_resources_dropdown_desc",
+                    "label": "Description",
+                    "name": "desc",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_nav_resources_dropdown"
+                },
+                {
+                    "key": "field_nav_resources_dropdown_link",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_nav_resources_dropdown"
+                }
+            ]
+        },
+        {
+            "key": "field_nav_blogs",
+            "label": "Blogs Menu Text",
+            "name": "nav_blogs",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Blogs",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_nav_blogs_link",
+            "label": "Blogs Link",
+            "name": "nav_blogs_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#",
+            "placeholder": ""
+        },
+        {
+            "key": "field_nav_about_us",
+            "label": "About Us Menu Text",
+            "name": "nav_about_us",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "About us",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_nav_about_us_dropdown",
+            "label": "About Us Dropdown Items",
+            "name": "nav_about_us_dropdown",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Item",
+            "default_value": [
+                {
+                    "title": "About Jar",
+                    "desc": "Learn what we do and why we do it best.",
+                    "link": "#"
+                },
+                {
+                    "title": "Careers",
+                    "desc": "Join us in building the future of smart saving.",
+                    "link": "#"
+                }
+            ],
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_nav_about_us_dropdown_title",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_nav_about_us_dropdown"
+                },
+                {
+                    "key": "field_nav_about_us_dropdown_desc",
+                    "label": "Description",
+                    "name": "desc",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_nav_about_us_dropdown"
+                },
+                {
+                    "key": "field_nav_about_us_dropdown_link",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_nav_about_us_dropdown"
+                }
+            ]
+        },
+        {
+            "key": "field_nav_help",
+            "label": "Help Menu Text",
+            "name": "nav_help",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Help",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_nav_help_link",
+            "label": "Help Link",
+            "name": "nav_help_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#",
+            "placeholder": ""
+        },
+        {
+            "key": "field_download_app_text",
+            "label": "Download App Button Text",
+            "name": "download_app_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Download App",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_download_app_link",
+            "label": "Download App Link",
+            "name": "download_app_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#",
+            "placeholder": ""
+        },
+        {
+            "key": "field_headline",
+            "label": "Main Headline",
+            "name": "headline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Save Easily. Grow Daily.",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_subheadline",
+            "label": "Subheadline",
+            "name": "subheadline",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Easy, automatic, daily saving in 24K pure gold to help you build your wealth.",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_cta_text",
+            "label": "CTA Button Text",
+            "name": "cta_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Download Jar App",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_cta_link",
+            "label": "CTA Button Link",
+            "name": "cta_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#",
+            "placeholder": ""
+        },
+        {
+            "key": "field_hero_video_url",
+            "label": "Hero Video URL",
+            "name": "hero_video_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Paste a YouTube embed URL (e.g. https:\/\/www.youtube.com\/embed\/VIDEO_ID) or a share URL (e.g. https:\/\/youtu.be\/VIDEO_ID)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/www.youtube.com\/embed\/Fp0qwSYp5FE?si=LsV2WvFqgRuggzlL",
+            "allow_in_bindings": 1,
+            "placeholder": "https:\/\/youtu.be\/VIDEO_ID"
+        },
+        {
+            "key": "field_awards_left_vector",
+            "label": "Awards Left Vector Image",
+            "name": "awards_left_vector",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Upload the left vector image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_awards_right_vector",
+            "label": "Awards Right Vector Image",
+            "name": "awards_right_vector",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Upload the right vector image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_awards_section",
+            "label": "Awards & Recognitions",
+            "name": "awards_section",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add each award to be displayed in the awards section.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "layout": "table",
+            "button_label": "Add Award",
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_award_image",
+                    "label": "Award Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_awards_section"
+                },
+                {
+                    "key": "field_award_title",
+                    "label": "Award Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_awards_section"
+                },
+                {
+                    "key": "field_award_subtitle",
+                    "label": "Award Subtitle",
+                    "name": "subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_awards_section"
+                },
+                {
+                    "key": "field_award_date",
+                    "label": "Award Date",
+                    "name": "date",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_awards_section"
+                }
+            ]
+        },
+        {
+            "key": "field_mentions_section_title",
+            "label": "Mentions Section Title",
+            "name": "mentions_section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Guess Who Mentioned Us!",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_mentions_section",
+            "label": "Mentions Carousel",
+            "name": "mentions_section",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add each mention (video) to the carousel.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "layout": "table",
+            "button_label": "Add Mention",
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_mentions_video_url",
+                    "label": "YouTube Video URL",
+                    "name": "video_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Paste a YouTube embed URL (e.g. https:\/\/www.youtube.com\/embed\/VIDEO_ID)",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_mentions_section"
+                },
+                {
+                    "key": "field_mentions_credit",
+                    "label": "Credit",
+                    "name": "credit",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Credit for the video (e.g. People by WTF podcast clip with Nikhil Kamath & Nandan Nilekani)",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_mentions_section"
+                },
+                {
+                    "key": "field_mentions_title",
+                    "label": "Mention Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Title of the mention (e.g. On People by WTF - Ep 3 ft. Nikhil Kamath & Nandan Nilekani)",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_mentions_section"
+                },
+                {
+                    "key": "field_mentions_subtitle",
+                    "label": "Mention Subtitle",
+                    "name": "subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Subtitle\/description for the mention",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_mentions_section"
+                }
+            ]
+        },
+        {
+            "key": "field_why_save_in_jar_title",
+            "label": "Section Title",
+            "name": "why_save_in_jar_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main heading for the section",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Why Save in Jar?",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_why_save_in_jar_features",
+            "label": "Features",
+            "name": "why_save_in_jar_features",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add each feature card",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Feature",
+            "rows_per_page": 20,
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_why_save_in_jar_icon",
+                    "label": "Icon URL",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Paste the badge\/icon image URL",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_why_save_in_jar_features"
+                },
+                {
+                    "key": "field_why_save_in_jar_card_title",
+                    "label": "Card Title",
+                    "name": "card_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Title for the feature card (e.g. Growth, Trust, Convenience)",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_why_save_in_jar_features"
+                },
+                {
+                    "key": "field_why_save_in_jar_card_desc",
+                    "label": "Card Description",
+                    "name": "card_desc",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Description for the feature card",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_why_save_in_jar_features"
+                }
+            ]
+        },
+        {
+            "key": "field_why_save_in_jar_footnote",
+            "label": "Footnote",
+            "name": "why_save_in_jar_footnote",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Footnote text below the cards",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "*Based on Historical Trends of Gold Rates in India",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_how_jar_works_title",
+            "label": "How Jar Works Title",
+            "name": "how_jar_works_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main heading for the section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "How Jar Works?",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_how_jar_works_steps",
+            "label": "How Jar Works Steps",
+            "name": "how_jar_works_steps",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add each step for the How Jar Works section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 1,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Step",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_how_jar_works_lottie_url",
+                    "label": "Lottie Animation URL",
+                    "name": "lottie_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Paste the Lottie JSON URL",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_how_jar_works_steps"
+                },
+                {
+                    "key": "field_how_jar_works_step_number",
+                    "label": "Step Number",
+                    "name": "step_number",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_how_jar_works_steps"
+                },
+                {
+                    "key": "field_how_jar_works_step_title",
+                    "label": "Step Title",
+                    "name": "step_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Title for this step",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_how_jar_works_steps"
+                },
+                {
+                    "key": "field_how_jar_works_step_desc",
+                    "label": "Step Description",
+                    "name": "step_desc",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Description for this step",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_how_jar_works_steps"
+                }
+            ]
+        },
+        {
+            "key": "field_reviews_section_title",
+            "label": "Reviews Section Title",
+            "name": "reviews_section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Join the Community of",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_reviews_section_subtitle",
+            "label": "Reviews Section Subtitle",
+            "name": "reviews_section_subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "3.5 Crore+ Daily Savers",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_reviews_section_button_text",
+            "label": "Download Button Text",
+            "name": "reviews_section_button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Download Jar App",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_reviews_section_button_link",
+            "label": "Download Button Link",
+            "name": "reviews_section_button_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#",
+            "placeholder": ""
+        },
+        {
+            "key": "field_reviews_repeater",
+            "label": "Reviews",
+            "name": "reviews_repeater",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "layout": "table",
+            "button_label": "Add Review",
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_review_user_image",
+                    "label": "User Image URL",
+                    "name": "user_image",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_reviews_repeater"
+                },
+                {
+                    "key": "field_review_user_name",
+                    "label": "User Name",
+                    "name": "user_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_reviews_repeater"
+                },
+                {
+                    "key": "field_review_title",
+                    "label": "Review Title",
+                    "name": "review_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_reviews_repeater"
+                },
+                {
+                    "key": "field_review_text",
+                    "label": "Review Text",
+                    "name": "review_text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "new_lines": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "rows": "",
+                    "parent_repeater": "field_reviews_repeater"
+                },
+                {
+                    "key": "field_review_stars",
+                    "label": "Star Rating",
+                    "name": "review_stars",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": 1,
+                    "max": 5,
+                    "default_value": 5,
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_reviews_repeater"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/landing-desktop"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Fields for the landing page block with navigation and hero section.",
+    "show_in_rest": 0,
+    "modified": 1749725036
+}
