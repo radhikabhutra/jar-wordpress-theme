@@ -29,6 +29,7 @@
     }
   });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
 
 <style>
 .splide__pagination__page {
@@ -341,8 +342,19 @@
             @if(have_rows('field_how_jar_works_steps')) 
                 @while(have_rows('field_how_jar_works_steps')) 
                     @php(the_row())
-                    <div class="lottie w-[300px] h-[300px]" id="lottie-{{ get_sub_field('field_how_jar_works_step_number') }}" 
-                        data-lottie-url="{{ get_sub_field('field_how_jar_works_lottie_url') }}"></div>
+                    <figure
+                        class="w-[300px] h-[300px]"
+                        x-data="{ animation: '' }"
+                        x-init="
+                            lottie.loadAnimation({
+                                container: $el,
+                                renderer: 'svg',
+                                loop: true,
+                                autoplay: true,
+                                path: '{{ get_sub_field('field_how_jar_works_lottie_url') }}'
+                            });
+                        "
+                    ></figure>
                 @endwhile
             @endif
         </div>
