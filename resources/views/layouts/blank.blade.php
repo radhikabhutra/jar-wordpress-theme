@@ -8,6 +8,7 @@
     @php(wp_head())
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('head-scripts')
   </head>
 
   <body @php(body_class())>
@@ -21,5 +22,6 @@
 
     @php(do_action('get_footer'))
     @php(wp_footer())
+    @stack('footer-scripts')
   </body>
 </html>
