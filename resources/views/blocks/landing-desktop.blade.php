@@ -10,8 +10,9 @@
   SupportsMode: true
   SupportsMultiple: false
 --}}
+@push('head-scripts')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-
+@endpush
 <style>
 .splide__pagination__page {
   background: #BEB4CC;
@@ -465,15 +466,15 @@
                     </svg>            
                     <div class="flex gap-1">
                         <template x-for="i in 5" :key="i">
-                        <<svg
-                          class="w-7 h-7"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24" height="22" viewBox="0 0 24 22" fill="none"
+                        <svg
+                        class="w-7 h-7"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="22" viewBox="0 0 24 22" fill="none"
                         >
-                          <path
+                        <path
                             d="M10.0979 1.8541C10.6966 0.0114765 13.3034 0.0114799 13.9021 1.8541L15.1432 5.67376C15.4109 6.49781 16.1789 7.05573 17.0453 7.05573H21.0615C22.999 7.05573 23.8045 9.53496 22.2371 10.6738L18.9879 13.0344C18.2869 13.5437 17.9936 14.4465 18.2614 15.2705L19.5024 19.0902C20.1012 20.9328 17.9922 22.465 16.4248 21.3262L13.1756 18.9656C12.4746 18.4563 11.5254 18.4563 10.8244 18.9656L7.57523 21.3262C6.0078 22.465 3.89885 20.9328 4.49755 19.0902L5.73863 15.2705C6.00638 14.4465 5.71306 13.5437 5.01209 13.0344L1.76289 10.6738C0.195462 9.53496 1.00102 7.05573 2.93846 7.05573H6.95469C7.82115 7.05573 8.58906 6.49781 8.8568 5.67376L10.0979 1.8541Z"
                             :fill="i <= currentReview.stars ? '#F4C430' : '#BEB4CC'"
-                          />
+                        />
                         </svg>
                         </template>
                     </div>
@@ -486,6 +487,7 @@
     </section>
 </main>
 
+@push('footer-scripts')
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script>
@@ -506,6 +508,12 @@
   });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+<script id="reviews-button" type="application/json">
+{!! json_encode([
+  'text' => get_field('reviews_section_button_text') ?: '',
+  'link' => get_field('reviews_section_button_link') ?: '#',
+]) !!}
+</script>
 <script id="reviews-data" type="application/json">
 {!! collect(get_field('reviews_repeater') ?: [])->map(function($row) {
   return [
@@ -517,42 +525,54 @@
   ];
 })->toJson() !!}
 </script>
-<script id="reviews-button" type="application/json">
-{!! json_encode([
-  'text' => get_field('reviews_section_button_text') ?: '',
-  'link' => get_field('reviews_section_button_link') ?: '#',
-]) !!}
-</script>
 <script>
 function reviewsComponent() {
   return {
     reviews: [],
-    button: { text: '', link: '#' },
     active: 0,
     timer: null,
     get currentReview() {
       return this.reviews[this.active] || {};
     },
     showReview(idx) {
-      this.active = idx;
-      this.stopAuto();
+      if (idx >= 0 && idx < this.reviews.length) {
+        this.active = idx;
+        this.stopAuto(); // Stop auto-cycling when user manually selects
+        
+        // Restart auto-cycling after 5 seconds of inactivity
+        setTimeout(() => {
+          if (!this.timer) {
+            this.startAuto();
+          }
+        }, 5000);
+      }
     },
+    
+    getRandomIndex() {
+      if (this.reviews.length <= 1) return 0;
+      
+      let newIndex;
+      do {
+        newIndex = Math.floor(Math.random() * this.reviews.length);
+      } while (newIndex === this.active);
+      
+      return newIndex;
+    },
+    
     startAuto() {
       if (this.timer || this.reviews.length < 2) return;
       this.timer = setInterval(() => {
-        let next;
-        do {
-          next = Math.floor(Math.random() * this.reviews.length);
-        } while (next === this.active && this.reviews.length > 1);
-        this.active = next;
+        this.active = this.getRandomIndex();
       }, 5000);
     },
+
     stopAuto() {
       if (this.timer) {
         clearInterval(this.timer);
         this.timer = null;
       }
     },
+
     init() {
       const reviewsScript = document.getElementById('reviews-data');
       if (reviewsScript) {
@@ -562,19 +582,14 @@ function reviewsComponent() {
           this.reviews = [];
         }
       }
-      const buttonScript = document.getElementById('reviews-button');
-      if (buttonScript) {
-        try {
-          this.button = JSON.parse(buttonScript.textContent);
-        } catch (e) {
-          this.button = { text: '', link: '#' };
-        }
-      }
-      // Set active to a random review on init
+      // Set initial random review
       if (this.reviews.length > 0) {
         this.active = Math.floor(Math.random() * this.reviews.length);
       }
+      // Start auto cycling as soon as the component is initialized
+      this.startAuto();
     }
   }
 }
 </script>
+@endpush
