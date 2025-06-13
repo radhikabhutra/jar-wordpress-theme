@@ -62,6 +62,55 @@
   .step-line {
     z-index: -1;
   }
+
+  /* Stories Section Specific Styles */
+  .stories-splide .splide__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #43197A;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 1;
+  }
+
+  .stories-splide .splide__arrow:hover {
+    transform: translateY(-50%) scale(1.05);
+    opacity: 1;
+  }
+
+  .stories-splide .splide__arrow--prev {
+    left: -72px;
+  }
+
+  .stories-splide .splide__arrow--next {
+    right: -72px;
+  }
+
+  .stories-splide .splide__arrow svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  .stories-splide .splide__arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .stories-splide .splide__arrow:disabled:hover {
+    opacity: 0.5;
+    transform: translateY(-50%) scale(1);
+  }
 </style>
 
 <header class="sticky top-0 z-30 w-full bg-white py-6 px-[120px] gap-[320px] mx-auto flex justify-center items-center">
@@ -475,6 +524,52 @@
       </div>
     </div>
   </section>
+
+  <!-- Stories Section -->
+  <section class="w-full bg-white py-20 px-4 flex flex-col items-center">
+    <h2 class="text-[56px] font-bold text-[#160829] text-center mb-3">
+      {{ get_field('stories_section_title') }}
+    </h2>
+    <p class="text-xl text-[#554766] text-center mb-12">
+      {{ get_field('stories_section_subtitle') }}
+    </p>
+    @if (have_rows('stories_repeater'))
+      <div class="w-full max-w-5xl mx-auto relative">
+        <div id="stories-splide" class="splide stories-splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              @while (have_rows('stories_repeater'))
+                @php(the_row())
+                <li class="splide__slide flex flex-col items-center">
+                  <div class="w-[295px] relative flex flex-col gap-3 items-center justify-center overflow-hidden">
+                    <div class="w-full h-[426px] flex items-center justify-center relative">
+                      <iframe src="{{ get_sub_field('video_url') }}" class="w-full h-full rounded-3xl"
+                        allowfullscreen frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        title="Story Video"></iframe>
+                      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="65" viewBox="0 0 64 65"
+                          fill="none">
+                          <path
+                            d="M31.999 5.66797C46.7265 5.66815 58.665 17.6075 58.665 32.335C58.6649 47.0623 46.7264 59.0008 31.999 59.001C17.2715 59.001 5.33221 47.0624 5.33203 32.335C5.33203 17.6074 17.2714 5.66797 31.999 5.66797ZM26.0361 20.2754C25.1482 19.7204 23.9964 20.3583 23.9961 21.4053V43.2607C23.9961 44.308 25.1481 44.9466 26.0361 44.3916L43.5205 33.4639C44.3558 32.9417 44.3557 31.7254 43.5205 31.2031L26.0361 20.2754Z"
+                            fill="white" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="w-full flex flex-col items-center gap-1">
+                      <div class="text-base font-bold text-[#1A003D]">{{ get_sub_field('name') }}
+                      </div>
+                      <div class="text-base text-[#554766]">{{ get_sub_field('position') }}</div>
+                    </div>
+                  </div>
+                </li>
+              @endwhile
+            </ul>
+          </div>
+        </div>
+      </div>
+    @endif
+  </section>
 </main>
 
 @push('footer-scripts')
@@ -499,22 +594,22 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
   <script id="reviews-button" type="application/json">
-{!! json_encode([
-  'text' => get_field('reviews_section_button_text') ?: '',
-  'link' => get_field('reviews_section_button_link') ?: '#',
-]) !!}
-</script>
+    {!! json_encode([
+    'text' => get_field('reviews_section_button_text') ?: '',
+    'link' => get_field('reviews_section_button_link') ?: '#',
+    ]) !!}
+  </script>
   <script id="reviews-data" type="application/json">
-{!! collect(get_field('reviews_repeater') ?: [])->map(function($row) {
-  return [
-    'image' => $row['user_image'] ?? '',
-    'name' => $row['user_name'] ?? '',
-    'title' => $row['review_title'] ?? '',
-    'text' => $row['review_text'] ?? '',
-    'stars' => $row['review_stars'] ?? 5,
-  ];
-})->toJson() !!}
-</script>
+    {!! collect(get_field('reviews_repeater') ?: [])->map(function($row) {
+    return [
+        'image' => $row['user_image'] ?? '',
+        'name' => $row['user_name'] ?? '',
+        'title' => $row['review_title'] ?? '',
+        'text' => $row['review_text'] ?? '',
+        'stars' => $row['review_stars'] ?? 5,
+    ];
+    })->toJson() !!}
+  </script>
   <script>
     function reviewsComponent() {
       return {
@@ -581,5 +676,35 @@
         }
       }
     }
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (document.getElementById('stories-splide')) {
+        new Splide('#stories-splide', {
+          type: 'loop',
+          perPage: 3,
+          gap: '12px',
+          pagination: false,
+          arrows: true,
+          autoplay: false,
+          focus: 'center',
+          trimSpace: false,
+          breakpoints: {
+            1024: {
+              perPage: 2
+            },
+            640: {
+              perPage: 1
+            }
+          },
+          classes: {
+            arrows: 'splide__arrows',
+            arrow: 'splide__arrow',
+            prev: 'splide__arrow--prev',
+            next: 'splide__arrow--next',
+          }
+        }).mount();
+      }
+    });
   </script>
 @endpush
